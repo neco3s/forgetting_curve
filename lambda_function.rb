@@ -7,7 +7,7 @@ require 'date'
 class SlackWraper
   def self.post(text)
     data = { "text" => text,"unfurl_links": true,"unfurl_media": true }
-    request_url = "https://hooks.slack.com/services/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"
+    request_url = "https://hooks.slack.com/services/dummy"
     uri = URI.parse(request_url)
     Net::HTTP.post_form(uri, {"payload" => data.to_json})
   end
